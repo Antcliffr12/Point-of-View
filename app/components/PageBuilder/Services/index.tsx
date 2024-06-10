@@ -10,7 +10,6 @@ export default async function index({ params }: Props) {
     const slug = params.slug
     const services: Services = await getServices(slug);
 
-     console.log(services.pageBuilder)
     const servicesData = services.pageBuilder.services || [];
     return (
         <section>
