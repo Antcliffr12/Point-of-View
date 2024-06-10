@@ -9,7 +9,7 @@ const nextConfig = {
         ],
     },
     experimental: {
-        taint: true,
+        taint: true
     }
 };
 
