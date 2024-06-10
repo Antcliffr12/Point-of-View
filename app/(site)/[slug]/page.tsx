@@ -1,3 +1,5 @@
+export const generateStaticParams = () => [];
+
 import { getPage } from "@/sanity/sanity-utils";
 
 type Props = {
@@ -13,3 +15,4 @@ export default async function Page({ params }: Props ) {
         </div>
     )
 }
+
