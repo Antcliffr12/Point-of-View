@@ -1,3 +1,5 @@
+import { Roboto } from "next/font/google";
+import { root } from "postcss";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -13,6 +15,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      }
     },
   },
   plugins: [],
