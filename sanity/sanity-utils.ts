@@ -130,24 +130,6 @@ export async function getAccordion(slug: string): Promise<Accordion> {
 }
 
  
-
-export async function getProjects(): Promise<Project[]> {
-
-    const client = createClient(config);
-
-    return client.fetch(
-        groq`*[_type == "project"]{
-            _id,
-            _createdAt,
-            name,
-            "slug": slug.current,
-            "image": image.asset->url,
-            url,
-            content
-        }`
-    );
-}
-
 export async function getProject(slug: string): Promise<Project> {
 
     const client = createClient(config);
