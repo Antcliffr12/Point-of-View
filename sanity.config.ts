@@ -5,7 +5,7 @@ import {visionTool} from '@sanity/vision'
 import schemas from "./sanity/schema";
  
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
+const projectId = '89y0168p'
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
 
 const config = defineConfig({
