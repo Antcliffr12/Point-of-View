@@ -6,6 +6,16 @@ import { Hero, Card, Accordion, Sponsors, Services } from "@/types/Blocks";
 import { createClient, groq } from "next-sanity";
 import config from './config/client-config';
 
+export async function PageSlugResult(): Promise<Page[]> {
+    const client = createClient(config);
+
+    return client.fetch(
+        groq`*[_type == "page"]{
+            "slug": slug.current
+        }`
+    );
+}
+
 export async function getNavigation(): Promise<Settings> {
     
     const client = createClient(config);
