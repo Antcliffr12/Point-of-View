@@ -6,11 +6,11 @@ type Props = {
     params: { slug:  string }
 }
 
-const pagepageSlugsQuerySlugs = groq`*[_type == "page"]{slug}`;
+const pageSlugsQuerySlugs = groq`*[_type == "page"]{slug}`;
 
 export async function generateStaticParams() {
     const client = createClient(config);
-    const slugs = await client.fetch(pagepageSlugsQuerySlugs);
+    const slugs = await client.fetch(pageSlugsQuerySlugs);
     return slugs.map((slug: string) => ({ params: { slug } }));
 }
 
