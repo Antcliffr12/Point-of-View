@@ -176,3 +176,13 @@ export async function getPage(slug: string): Promise<Page> {
         { slug }
     );
 }
+
+export async function getAllSlugs() {
+    const client = createClient(config);
+
+    return client.fetch(
+        groq`*[_type == "page"]{
+            "slug": slug.current
+        }`
+    );
+}

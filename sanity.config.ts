@@ -9,11 +9,11 @@ const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
 
 const config = defineConfig({
-    basePath: "/admin",
-    title: "Point of View LLC",
     projectId,
     dataset,
+    title: "Point of View LLC",
     apiVersion: "2024-05-27",
+    basePath: "/admin",
     plugins: [structureTool(), visionTool()],
     schema: { types: schemas}
     
